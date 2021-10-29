@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-yes-no-button-group',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YesNoButtonGroupComponent implements OnInit {
 
+  @Input() public value: String = null;
+  @Input() public label: String = '';
+  
   constructor() { }
 
   ngOnInit(): void {
